@@ -1,0 +1,27 @@
+# Copy this file to terraform.tfvars, which is excluded from Git.
+# Replace every documentation value with the values for your environment.
+
+subscription_id     = "00000000-0000-0000-0000-000000000000"
+resource_group_name = "boundary-multihop-lab"
+location            = "japanwest"
+admin_username      = "azureadmin"
+
+# RFC 5737 documentation address. Replace with the administrator's public CIDR.
+admin_source_cidr = "203.0.113.10/32"
+
+# Example private address plan. Change it if these ranges overlap your environment.
+worker_vnet_cidr        = "10.10.0.0/16"
+worker_subnet_cidr      = "10.10.1.0/24"
+standalone_bastion_cidr = "10.10.2.0/24"
+target_vnet_cidr        = "10.20.0.0/16"
+target_subnet_cidr      = "10.20.1.0/24"
+
+# RFC 5737 documentation address. Replace with current HCP Boundary endpoint CIDRs.
+hcp_boundary_cidrs = ["198.51.100.10/32"]
+
+# Enable only when cloud-init should install the Boundary worker.
+# enable_boundary_worker_bootstrap = true
+# hcp_boundary_cluster_id           = "your-hcp-boundary-cluster-id"
+# boundary_worker_type_tags         = ["azure-intermediate"]
+
+# tags = {}

@@ -1,0 +1,7 @@
+* text=auto
+
+*.tf text eol=lf
+*.tftpl text eol=lf
+*.sh text eol=lf
+*.md text eol=lf
+*.svg text eol=lf
